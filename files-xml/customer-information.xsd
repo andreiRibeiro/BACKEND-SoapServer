@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://aaribeiro.com.br"
+        xmlns:tns="http://aaribeiro.com.br"
+        elementFormDefault="qualified">
+
+    <element name="GetCustomerDetailRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="integer"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="GetCustomerDetailResponse">
+        <complexType>
+            <sequence>
+                <element name="CustomerDetail" type="tns:CustomerDetail"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="GetAllCustomerResponse">
+        <complexType>
+            <sequence>
+                <element name="CustomerDetail" type="tns:CustomerDetail"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="CustomerDetail">
+        <sequence>
+            <element name="id" type="integer"/>
+            <element name="nome" type="string"/>
+            <element name="phone" type="string"/>
+            <element name="email" type="string"/>
+        </sequence>
+    </complexType>
+
+</schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GetCustomerDetailResponse
+        xmlns="http://aaribeiro.com.br"
+        xsi:schemaLocation="http://aaribeiro.com.br customer-information.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <CustomerDetail>
+        <id>123</id>
+        <nome>Bob</nome>
+        <phone>99375587</phone>
+        <email>bob@gmail.com</email>
+    </CustomerDetail>
+</GetCustomerDetailResponse>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://aaribeiro.com.br"
+        xmlns:tns="http://aaribeiro.com.br"
+        elementFormDefault="qualified">
+
+    <element name="GetCustomerDetailRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="GetCustomerDetailResponse">
+        <complexType>
+            <sequence>
+                <element name="CustomerDetail" type="tns:CustomerDetail"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="GetAllCustomerDetailRequest">
+        <complexType>
+        </complexType>
+    </element>
+
+    <element name="GetAllCustomerDetailResponse">
+        <complexType>
+            <sequence>
+                <element name="CustomerDetail" type="tns:CustomerDetail" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="DeleteCustomerRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="DeleteCustomerResponse">
+        <complexType>
+            <sequence>
+                <element name="status" type="tns:Status"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <simpleType name="Status">
+        <restriction base="string">
+            <enumeration value="SUCESS"/>
+            <enumeration value="FAILURE"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="CustomerDetail">
+        <sequence>
+            <element name="id" type="int"/>
+            <element name="nome" type="string"/>
+            <element name="phone" type="string"/>
+            <element name="email" type="string"/>
+        </sequence>
+    </complexType>
+
+</schema>
