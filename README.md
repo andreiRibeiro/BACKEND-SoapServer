@@ -8,7 +8,7 @@ Nesta integração este microserviço converte os dados enviados via SOAP em obj
 e posteriormente retorna ao requisitante https://github.com/andreiRibeiro/INTEGRACOES-SoapClient as informações solicitadas via objeto SOAP.
 
 
-### 1. Eh possível via API solicitar os dados de um cliente infomando neste caso o id.
+### 1) Eh possível via API solicitar os dados de um cliente infomando neste caso o id.
 
 ![](src/imagens/soapServerConsulta.png)
 
